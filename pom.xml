@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>datalake</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+<!--        <plugins>-->
+
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>exec-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <executable>java</executable> &lt;!&ndash; executable指的是要执行什么样的命令 &ndash;&gt;-->
+<!--                    <arguments>-->
+<!--                        <argument>-DsystemProperty1=value1</argument> &lt;!&ndash; 这是一个系统属性参数 &ndash;&gt;-->
+<!--                        <argument>-DsystemProperty2=value2</argument> &lt;!&ndash; 这是一个系统属性参数 &ndash;&gt;-->
+<!--                        <argument>-Xmx2G</argument> &lt;!&ndash; 这是一个JVM参数 &ndash;&gt;-->
+<!--                        <argument>-Xms2G</argument> &lt;!&ndash; 这是一个JVM参数 &ndash;&gt;-->
+<!--                        &lt;!&ndash;automatically creates the classpath using all project dependencies,-->
+<!--                            also adding the project build directory &ndash;&gt;-->
+<!--                        <argument>-classpath</argument> &lt;!&ndash; 这是classpath属性，其值就是下面的<classpath/> &ndash;&gt;-->
+<!--                        <classpath/> &lt;!&ndash; 这是exec插件最有价值的地方，关于工程的classpath并不需要手动指定，它将由exec自动计算得出 &ndash;&gt;-->
+<!--                        <argument>Main</argument> &lt;!&ndash; 程序入口，主类名称 &ndash;&gt;-->
+<!--                        <argument>arg1</argument> &lt;!&ndash; 程序的第一个命令行参数 &ndash;&gt;-->
+<!--                        <argument>arg2</argument> &lt;!&ndash; 程序的第二个命令行参数 &ndash;&gt;-->
+<!--                    </arguments>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <source>8</source>-->
+<!--                    <target>8</target>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>Main</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
