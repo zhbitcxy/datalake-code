@@ -86,8 +86,9 @@ like过滤类型有三种：ANY（任意一个满足匹配算匹配成功）,NON
 #### 对于线程并发处理方面。
 这里使用了ThreadLocal避免了线程同步开销，整个任务处理过程都是无锁的。
 
+#### 总结
 最后成绩为45s，比第二名快了13s(提升28%)，比第五名快了37s（提升82%）
-。代码已开源到github(https://github.com/zhbitcxy/datalake-code)，欢迎大家交流和学习，谢谢。
+。代码已开源到github(https://github.com/zhbitcxy/datalake-code)， 欢迎大家交流和学习，谢谢。
 
 #### 运行程序方法
 -  cd code/
