@@ -85,7 +85,7 @@ like过滤类型有三种：ANY（任意一个满足匹配算匹配成功）,NON
 
 代码已开源到github(https://github.com/zhbitcxy/datalake-code)， 欢迎大家交流和学习，谢谢。
 
-#### 运行程序方法
+#### 运行程序方法 (请在Mac/linux环境运行)
 -  cd code/
 -  mvn compile
 -  mvn exec:java -Dexec.mainClass="Main"
